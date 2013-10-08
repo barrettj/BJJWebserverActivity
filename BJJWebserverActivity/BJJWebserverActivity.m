@@ -72,7 +72,7 @@
     [_httpServer setType:@"_http._tcp."];
     
     NSString *filePath = self.urlActivityItem.path;
-    NSString *fileName = [filePath lastPathComponent];
+    NSString *fileName = [[filePath lastPathComponent] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *docRoot = [filePath stringByDeletingLastPathComponent];
     
     [_httpServer setDocumentRoot:docRoot];
