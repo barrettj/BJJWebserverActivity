@@ -69,7 +69,7 @@
 - (void)performActivity {
     _httpServer = [[HTTPServer alloc] init];
     
-    [_httpServer setType:@"_http._tcp."];
+    //[_httpServer setType:@"_http._tcp."];
     
     NSString *filePath = self.urlActivityItem.path;
     NSString *fileName = [[filePath lastPathComponent] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

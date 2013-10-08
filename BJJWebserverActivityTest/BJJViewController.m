@@ -40,6 +40,10 @@
         
         NSLog(@"Get the file at: %@", url);
         
+        // normally you'd display a UI here saying where to download the file and then have a done button
+        
+        // wait 30 seconds and then cleanup
+        [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:30]];
         finished();
     };
     
