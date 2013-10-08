@@ -102,6 +102,23 @@
         }
         else {
             if (self.onStart) {
+                NSInteger tries = 0;
+                while (_httpServer.port == 0) {
+                    // we need to wait a bit to get a port
+                    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
+                    
+                    ++tries;
+                    
+                    if (tries > 10) {
+                        if (self.onError) {
+                            error = [NSError errorWithDomain:@"com.barrettj.webserveractivity" code:200 userInfo:@{NSLocalizedDescriptionKey : @"Could not get http server port."}];
+                            self.onError(nil);
+                        }
+
+                        return;
+                    }
+                }
+                
                 NSString *urlString = [NSString stringWithFormat:@"http://%@:%i/%@", ipAddress, _httpServer.port, fileName];
                 self.onStart([NSURL URLWithString:urlString], onFinished);
             }
