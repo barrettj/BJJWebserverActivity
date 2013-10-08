@@ -13,14 +13,14 @@
 
 @interface BJJWebserverActivity ()
 
+@property (nonatomic, readonly) HTTPServer *httpServer;
+
 @property (copy, nonatomic) NSArray *activityItems;
 @property (copy, nonatomic) NSURL *urlActivityItem;
 
 @end
 
-@implementation BJJWebserverActivity {
-    HTTPServer *_httpServer;
-}
+@implementation BJJWebserverActivity
 
 
 - (instancetype)init {
@@ -28,6 +28,8 @@
     
     if (self) {
         _activityTitle = NSLocalizedStringWithDefaultValue(@"SHAVE_VIA_WEBSERVER_DEFAULT_TITLE", nil, [NSBundle mainBundle], @"Share via Webserver", @"");
+        
+        _httpServer = [[HTTPServer alloc] init];
     }
     
     return self;
@@ -67,24 +69,22 @@
 }
 
 - (void)performActivity {
-    _httpServer = [[HTTPServer alloc] init];
-    
     //[_httpServer setType:@"_http._tcp."];
     
     NSString *filePath = self.urlActivityItem.path;
     NSString *fileName = [[filePath lastPathComponent] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *docRoot = [filePath stringByDeletingLastPathComponent];
     
-    [_httpServer setDocumentRoot:docRoot];
+    [self.httpServer setDocumentRoot:docRoot];
     
     BJJFinishedUsingWebserverBlock onFinished = ^{
-        [_httpServer stop];
+        [self.httpServer stop];
         
         [self activityDidFinish:YES];
     };
     
     NSError *error = nil;
-    if(![_httpServer start:&error]) {
+    if(![self.httpServer start:&error]) {
         if (self.onError) {
             self.onError(error);
         }
@@ -97,29 +97,12 @@
         if (ipAddress.length == 0) {
             if (self.onError) {
                 error = [NSError errorWithDomain:@"com.barrettj.webserveractivity" code:100 userInfo:@{NSLocalizedDescriptionKey : @"Could not get local wifi ip address."}];
-                self.onError(nil);
+                self.onError(error);
             }
         }
         else {
             if (self.onStart) {
-                NSInteger tries = 0;
-                while (_httpServer.port == 0) {
-                    // we need to wait a bit to get a port
-                    [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.5]];
-                    
-                    ++tries;
-                    
-                    if (tries > 10) {
-                        if (self.onError) {
-                            error = [NSError errorWithDomain:@"com.barrettj.webserveractivity" code:200 userInfo:@{NSLocalizedDescriptionKey : @"Could not get http server port."}];
-                            self.onError(nil);
-                        }
-
-                        return;
-                    }
-                }
-                
-                NSString *urlString = [NSString stringWithFormat:@"http://%@:%i/%@", ipAddress, _httpServer.port, fileName];
+                NSString *urlString = [NSString stringWithFormat:@"http://%@:%i/%@", ipAddress, self.httpServer.listeningPort, fileName];
                 self.onStart([NSURL URLWithString:urlString], onFinished);
             }
             else {
