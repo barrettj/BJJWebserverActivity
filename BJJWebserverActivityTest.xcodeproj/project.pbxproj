@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		658699EB4D74430C9C6CAF36 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5BD40D84BA4A76BE3F82F9 /* libPods.a */; };
 		B506575818045E9E00BE8077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506575718045E9E00BE8077 /* Foundation.framework */; };
 		B506575A18045E9E00BE8077 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506575918045E9E00BE8077 /* CoreGraphics.framework */; };
 		B506575C18045E9E00BE8077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506575B18045E9E00BE8077 /* UIKit.framework */; };
@@ -17,32 +18,19 @@
 		B506576E18045E9E00BE8077 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B506576C18045E9E00BE8077 /* Main_iPad.storyboard */; };
 		B506577118045E9E00BE8077 /* BJJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B506577018045E9E00BE8077 /* BJJViewController.m */; };
 		B506577318045E9E00BE8077 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B506577218045E9E00BE8077 /* Images.xcassets */; };
-		B506577A18045E9E00BE8077 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506577918045E9E00BE8077 /* XCTest.framework */; };
-		B506577B18045E9E00BE8077 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506575718045E9E00BE8077 /* Foundation.framework */; };
-		B506577C18045E9E00BE8077 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506575B18045E9E00BE8077 /* UIKit.framework */; };
-		B506578418045E9E00BE8077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B506578218045E9E00BE8077 /* InfoPlist.strings */; };
-		B506578618045E9E00BE8077 /* BJWebserverActivityTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B506578518045E9E00BE8077 /* BJWebserverActivityTestTests.m */; };
+		B506579018045FC800BE8077 /* Test.html in Resources */ = {isa = PBXBuildFile; fileRef = B506578F18045FC800BE8077 /* Test.html */; };
+		B5065794180460EE00BE8077 /* BJJWebserverActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = B5065793180460EE00BE8077 /* BJJWebserverActivity.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B506577D18045E9E00BE8077 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B506574C18045E9E00BE8077 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B506575318045E9E00BE8077;
-			remoteInfo = BJWebserverActivityTest;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		B506575418045E9E00BE8077 /* BJWebserverActivityTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BJWebserverActivityTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B506575418045E9E00BE8077 /* BJJWebserverActivityTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BJJWebserverActivityTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B506575718045E9E00BE8077 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B506575918045E9E00BE8077 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B506575B18045E9E00BE8077 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B506575F18045E9E00BE8077 /* BJWebserverActivityTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BJWebserverActivityTest-Info.plist"; sourceTree = "<group>"; };
+		B506575F18045E9E00BE8077 /* BJJWebserverActivityTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BJJWebserverActivityTest-Info.plist"; sourceTree = "<group>"; };
 		B506576118045E9E00BE8077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B506576318045E9E00BE8077 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B506576518045E9E00BE8077 /* BJWebserverActivityTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BJWebserverActivityTest-Prefix.pch"; sourceTree = "<group>"; };
+		B506576518045E9E00BE8077 /* BJJWebserverActivityTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BJJWebserverActivityTest-Prefix.pch"; sourceTree = "<group>"; };
 		B506576618045E9E00BE8077 /* BJJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJJAppDelegate.h; sourceTree = "<group>"; };
 		B506576718045E9E00BE8077 /* BJJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJJAppDelegate.m; sourceTree = "<group>"; };
 		B506576A18045E9E00BE8077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -50,11 +38,12 @@
 		B506576F18045E9E00BE8077 /* BJJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BJJViewController.h; sourceTree = "<group>"; };
 		B506577018045E9E00BE8077 /* BJJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJJViewController.m; sourceTree = "<group>"; };
 		B506577218045E9E00BE8077 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B506577818045E9E00BE8077 /* BJWebserverActivityTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BJWebserverActivityTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B506577918045E9E00BE8077 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B506578118045E9E00BE8077 /* BJWebserverActivityTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BJWebserverActivityTestTests-Info.plist"; sourceTree = "<group>"; };
-		B506578318045E9E00BE8077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B506578518045E9E00BE8077 /* BJWebserverActivityTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BJWebserverActivityTestTests.m; sourceTree = "<group>"; };
+		B506578F18045FC800BE8077 /* Test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Test.html; sourceTree = "<group>"; };
+		B5065792180460EE00BE8077 /* BJJWebserverActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BJJWebserverActivity.h; sourceTree = "<group>"; };
+		B5065793180460EE00BE8077 /* BJJWebserverActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BJJWebserverActivity.m; sourceTree = "<group>"; };
+		B908C2B6FC0A4739B6159EBF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		CF5BD40D84BA4A76BE3F82F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,16 +54,7 @@
 				B506575A18045E9E00BE8077 /* CoreGraphics.framework in Frameworks */,
 				B506575C18045E9E00BE8077 /* UIKit.framework in Frameworks */,
 				B506575818045E9E00BE8077 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B506577518045E9E00BE8077 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B506577A18045E9E00BE8077 /* XCTest.framework in Frameworks */,
-				B506577C18045E9E00BE8077 /* UIKit.framework in Frameworks */,
-				B506577B18045E9E00BE8077 /* Foundation.framework in Frameworks */,
+				658699EB4D74430C9C6CAF36 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,18 +64,18 @@
 		B506574B18045E9E00BE8077 = {
 			isa = PBXGroup;
 			children = (
-				B506575D18045E9E00BE8077 /* BJWebserverActivityTest */,
-				B506577F18045E9E00BE8077 /* BJWebserverActivityTestTests */,
+				B5065791180460D500BE8077 /* BJJWebserverActivity */,
+				B506575D18045E9E00BE8077 /* BJJWebserverActivityTest */,
 				B506575618045E9E00BE8077 /* Frameworks */,
 				B506575518045E9E00BE8077 /* Products */,
+				B908C2B6FC0A4739B6159EBF /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		B506575518045E9E00BE8077 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B506575418045E9E00BE8077 /* BJWebserverActivityTest.app */,
-				B506577818045E9E00BE8077 /* BJWebserverActivityTestTests.xctest */,
+				B506575418045E9E00BE8077 /* BJJWebserverActivityTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,11 +87,12 @@
 				B506575918045E9E00BE8077 /* CoreGraphics.framework */,
 				B506575B18045E9E00BE8077 /* UIKit.framework */,
 				B506577918045E9E00BE8077 /* XCTest.framework */,
+				CF5BD40D84BA4A76BE3F82F9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B506575D18045E9E00BE8077 /* BJWebserverActivityTest */ = {
+		B506575D18045E9E00BE8077 /* BJJWebserverActivityTest */ = {
 			isa = PBXGroup;
 			children = (
 				B506576618045E9E00BE8077 /* BJJAppDelegate.h */,
@@ -120,78 +101,54 @@
 				B506576C18045E9E00BE8077 /* Main_iPad.storyboard */,
 				B506576F18045E9E00BE8077 /* BJJViewController.h */,
 				B506577018045E9E00BE8077 /* BJJViewController.m */,
+				B506578F18045FC800BE8077 /* Test.html */,
 				B506577218045E9E00BE8077 /* Images.xcassets */,
 				B506575E18045E9E00BE8077 /* Supporting Files */,
 			);
-			path = BJWebserverActivityTest;
+			path = BJJWebserverActivityTest;
 			sourceTree = "<group>";
 		};
 		B506575E18045E9E00BE8077 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B506575F18045E9E00BE8077 /* BJWebserverActivityTest-Info.plist */,
+				B506575F18045E9E00BE8077 /* BJJWebserverActivityTest-Info.plist */,
 				B506576018045E9E00BE8077 /* InfoPlist.strings */,
 				B506576318045E9E00BE8077 /* main.m */,
-				B506576518045E9E00BE8077 /* BJWebserverActivityTest-Prefix.pch */,
+				B506576518045E9E00BE8077 /* BJJWebserverActivityTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B506577F18045E9E00BE8077 /* BJWebserverActivityTestTests */ = {
+		B5065791180460D500BE8077 /* BJJWebserverActivity */ = {
 			isa = PBXGroup;
 			children = (
-				B506578518045E9E00BE8077 /* BJWebserverActivityTestTests.m */,
-				B506578018045E9E00BE8077 /* Supporting Files */,
+				B5065792180460EE00BE8077 /* BJJWebserverActivity.h */,
+				B5065793180460EE00BE8077 /* BJJWebserverActivity.m */,
 			);
-			path = BJWebserverActivityTestTests;
-			sourceTree = "<group>";
-		};
-		B506578018045E9E00BE8077 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B506578118045E9E00BE8077 /* BJWebserverActivityTestTests-Info.plist */,
-				B506578218045E9E00BE8077 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
+			path = BJJWebserverActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B506575318045E9E00BE8077 /* BJWebserverActivityTest */ = {
+		B506575318045E9E00BE8077 /* BJJWebserverActivityTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B506578918045E9E00BE8077 /* Build configuration list for PBXNativeTarget "BJWebserverActivityTest" */;
+			buildConfigurationList = B506578918045E9E00BE8077 /* Build configuration list for PBXNativeTarget "BJJWebserverActivityTest" */;
 			buildPhases = (
+				52C8DBB323F344CF8C9D46F3 /* Check Pods Manifest.lock */,
 				B506575018045E9E00BE8077 /* Sources */,
 				B506575118045E9E00BE8077 /* Frameworks */,
 				B506575218045E9E00BE8077 /* Resources */,
+				21C0A4FC1E55428ABAFD8324 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BJWebserverActivityTest;
+			name = BJJWebserverActivityTest;
 			productName = BJWebserverActivityTest;
-			productReference = B506575418045E9E00BE8077 /* BJWebserverActivityTest.app */;
+			productReference = B506575418045E9E00BE8077 /* BJJWebserverActivityTest.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B506577718045E9E00BE8077 /* BJWebserverActivityTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B506578C18045E9E00BE8077 /* Build configuration list for PBXNativeTarget "BJWebserverActivityTestTests" */;
-			buildPhases = (
-				B506577418045E9E00BE8077 /* Sources */,
-				B506577518045E9E00BE8077 /* Frameworks */,
-				B506577618045E9E00BE8077 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B506577E18045E9E00BE8077 /* PBXTargetDependency */,
-			);
-			name = BJWebserverActivityTestTests;
-			productName = BJWebserverActivityTestTests;
-			productReference = B506577818045E9E00BE8077 /* BJWebserverActivityTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -202,13 +159,8 @@
 				CLASSPREFIX = BJJ;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Barrett Jacobsen";
-				TargetAttributes = {
-					B506577718045E9E00BE8077 = {
-						TestTargetID = B506575318045E9E00BE8077;
-					};
-				};
 			};
-			buildConfigurationList = B506574F18045E9E00BE8077 /* Build configuration list for PBXProject "BJWebserverActivityTest" */;
+			buildConfigurationList = B506574F18045E9E00BE8077 /* Build configuration list for PBXProject "BJJWebserverActivityTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -221,8 +173,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B506575318045E9E00BE8077 /* BJWebserverActivityTest */,
-				B506577718045E9E00BE8077 /* BJWebserverActivityTestTests */,
+				B506575318045E9E00BE8077 /* BJJWebserverActivityTest */,
 			);
 		};
 /* End PBXProject section */
@@ -232,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B506579018045FC800BE8077 /* Test.html in Resources */,
 				B506576E18045E9E00BE8077 /* Main_iPad.storyboard in Resources */,
 				B506577318045E9E00BE8077 /* Images.xcassets in Resources */,
 				B506576B18045E9E00BE8077 /* Main_iPhone.storyboard in Resources */,
@@ -239,15 +191,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B506577618045E9E00BE8077 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21C0A4FC1E55428ABAFD8324 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B506578418045E9E00BE8077 /* InfoPlist.strings in Resources */,
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		52C8DBB323F344CF8C9D46F3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B506575018045E9E00BE8077 /* Sources */ = {
@@ -255,28 +232,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B506577118045E9E00BE8077 /* BJJViewController.m in Sources */,
+				B5065794180460EE00BE8077 /* BJJWebserverActivity.m in Sources */,
 				B506576418045E9E00BE8077 /* main.m in Sources */,
 				B506576818045E9E00BE8077 /* BJJAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B506577418045E9E00BE8077 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B506578618045E9E00BE8077 /* BJWebserverActivityTestTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B506577E18045E9E00BE8077 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B506575318045E9E00BE8077 /* BJWebserverActivityTest */;
-			targetProxy = B506577D18045E9E00BE8077 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B506576018045E9E00BE8077 /* InfoPlist.strings */ = {
@@ -301,14 +263,6 @@
 				B506576D18045E9E00BE8077 /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		B506578218045E9E00BE8077 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B506578318045E9E00BE8077 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -390,76 +344,36 @@
 		};
 		B506578A18045E9E00BE8077 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B908C2B6FC0A4739B6159EBF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BJWebserverActivityTest/BJWebserverActivityTest-Prefix.pch";
-				INFOPLIST_FILE = "BJWebserverActivityTest/BJWebserverActivityTest-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "BJJWebserverActivityTest/BJJWebserverActivityTest-Prefix.pch";
+				INFOPLIST_FILE = "BJJWebserverActivityTest/BJJWebserverActivityTest-Info.plist";
+				PRODUCT_NAME = BJJWebserverActivityTest;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		B506578B18045E9E00BE8077 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B908C2B6FC0A4739B6159EBF /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BJWebserverActivityTest/BJWebserverActivityTest-Prefix.pch";
-				INFOPLIST_FILE = "BJWebserverActivityTest/BJWebserverActivityTest-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "BJJWebserverActivityTest/BJJWebserverActivityTest-Prefix.pch";
+				INFOPLIST_FILE = "BJJWebserverActivityTest/BJJWebserverActivityTest-Info.plist";
+				PRODUCT_NAME = BJJWebserverActivityTest;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		B506578D18045E9E00BE8077 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BJWebserverActivityTest.app/BJWebserverActivityTest";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BJWebserverActivityTest/BJWebserverActivityTest-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "BJWebserverActivityTestTests/BJWebserverActivityTestTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		B506578E18045E9E00BE8077 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BJWebserverActivityTest.app/BJWebserverActivityTest";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BJWebserverActivityTest/BJWebserverActivityTest-Prefix.pch";
-				INFOPLIST_FILE = "BJWebserverActivityTestTests/BJWebserverActivityTestTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B506574F18045E9E00BE8077 /* Build configuration list for PBXProject "BJWebserverActivityTest" */ = {
+		B506574F18045E9E00BE8077 /* Build configuration list for PBXProject "BJJWebserverActivityTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B506578718045E9E00BE8077 /* Debug */,
@@ -468,21 +382,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B506578918045E9E00BE8077 /* Build configuration list for PBXNativeTarget "BJWebserverActivityTest" */ = {
+		B506578918045E9E00BE8077 /* Build configuration list for PBXNativeTarget "BJJWebserverActivityTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B506578A18045E9E00BE8077 /* Debug */,
 				B506578B18045E9E00BE8077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		B506578C18045E9E00BE8077 /* Build configuration list for PBXNativeTarget "BJWebserverActivityTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B506578D18045E9E00BE8077 /* Debug */,
-				B506578E18045E9E00BE8077 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
