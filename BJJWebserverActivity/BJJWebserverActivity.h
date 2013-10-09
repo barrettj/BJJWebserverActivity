@@ -26,4 +26,6 @@ typedef void (^BJJWebserverStartedBlock)(NSURL *url, BJJFinishedUsingWebserverBl
 @property (nonatomic, copy) BJJErrorStartingWebserverBlock onError;
 @property (nonatomic, copy) BJJWebserverStartedBlock onStart;
 
++ (NSString *)localWifiIPAddress;
+
 @end
