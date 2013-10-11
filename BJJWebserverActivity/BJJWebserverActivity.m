@@ -8,12 +8,11 @@
 
 #import "BJJWebserverActivity.h"
 #import "HTTPServer.h"
+#import "HTTPRedirectResponse.h"
 #include <ifaddrs.h>
 #include <arpa/inet.h>
 
 @interface BJJWebserverActivity ()
-
-@property (nonatomic, readonly) HTTPServer *httpServer;
 
 @property (copy, nonatomic) NSArray *activityItems;
 @property (copy, nonatomic) NSURL *urlActivityItem;
@@ -30,6 +29,8 @@
         _activityTitle = NSLocalizedStringWithDefaultValue(@"SHAVE_VIA_WEBSERVER_DEFAULT_TITLE", nil, [NSBundle mainBundle], @"Share via Webserver", @"");
         
         _httpServer = [[HTTPServer alloc] init];
+        
+        _redirectToSpecifiedFile = YES;
     }
     
     return self;
@@ -69,13 +70,29 @@
 }
 
 - (void)performActivity {
-    //[_httpServer setType:@"_http._tcp."];
-    
     NSString *filePath = self.urlActivityItem.path;
     NSString *fileName = [[filePath lastPathComponent] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *docRoot = [filePath stringByDeletingLastPathComponent];
     
     [self.httpServer setDocumentRoot:docRoot];
+    
+    if (self.redirectToSpecifiedFile) {
+        if (self.httpServer.connectionClass != [HTTPConnection class] && self.httpServer.connectionClass != [RedirectingHTTPConnection class]) {
+            NSLog(@"Custom HTTPConnection is being overwritten by redirectToSpecifiedFile");
+        }
+        
+        [self.httpServer setConnectionClass:[RedirectingHTTPConnection class]];
+        
+        [RedirectingHTTPConnection setRedirectPath:fileName];
+    }
+    else if (self.httpServer.connectionClass != [HTTPConnection class]) {
+        if (self.httpServer.connectionClass == [RedirectingHTTPConnection class]) {
+            [self.httpServer setConnectionClass:[HTTPConnection class]];
+        }
+        else {
+            NSLog(@"Already using custom connection class!");
+        }
+    }
     
     BJJFinishedUsingWebserverBlock onFinished = ^{
         [self.httpServer stop];
@@ -143,6 +160,40 @@
 	freeifaddrs(interfaces);
 	
 	return address;
+}
+
+
+@end
+
+
+@implementation RedirectingHTTPConnection
+
+static NSString *sharedRedirectPath;
+
++ (NSString*)redirectPath {
+    return sharedRedirectPath;
+}
+
++ (void)setRedirectPath:(NSString*)path {
+    sharedRedirectPath = [path copy];
+}
+
+- (NSObject<HTTPResponse> *)httpResponseForMethod:(NSString *)method URI:(NSString *)path {
+    //NSLog(@"uri: %@", path);
+    
+	NSString *filePath = [self filePathForURI:path];
+	
+    if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+        if ([path isEqualToString:@"/favicon.ico"]) {
+            // Don't redirect the favicon
+            return nil;
+        }
+
+        HTTPRedirectResponse *redirect = [[HTTPRedirectResponse alloc] initWithPath:[RedirectingHTTPConnection redirectPath]];
+        return redirect;
+    }
+	
+	return [super httpResponseForMethod:method URI:path];
 }
 
 

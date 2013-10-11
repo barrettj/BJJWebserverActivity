@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HTTPConnection.h"
 
 @class BJJWebserverActivity;
 
@@ -16,9 +17,13 @@ typedef void (^BJJFinishedUsingWebserverBlock)(void);
 
 typedef void (^BJJWebserverStartedBlock)(NSURL *url, BJJFinishedUsingWebserverBlock finished);
 
-
+@class HTTPServer;
 
 @interface BJJWebserverActivity : UIActivity
+
+@property (nonatomic, readonly) HTTPServer *httpServer;
+
+@property (nonatomic, assign) BOOL redirectToSpecifiedFile;
 
 @property (nonatomic, strong) UIImage *activityImage;
 @property (nonatomic, strong) NSString *activityTitle;
@@ -28,4 +33,8 @@ typedef void (^BJJWebserverStartedBlock)(NSURL *url, BJJFinishedUsingWebserverBl
 
 + (NSString *)localWifiIPAddress;
 
+@end
+
+@interface RedirectingHTTPConnection : HTTPConnection
++ (void)setRedirectPath:(NSString*)path;
 @end
