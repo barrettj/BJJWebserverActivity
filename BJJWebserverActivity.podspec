@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                  = "BJJWebserverActivity"
-  s.version               = "0.0.2"
+  s.version               = "0.0.3"
   s.summary               = "UIActivity subclass to share via a webserver."
   s.homepage              = "https://github.com/barrettj/BJJWebserverActivity"
   s.license               = { :type => 'MIT', :file => 'README.md' }
